@@ -28,7 +28,8 @@ function initialize(products) {
     updateDisplay();
 
     searchBtn.addEventListener('click', selectCategory);
-    function selectCategory() {
+    function selectCategory(e) {
+        e.preventDefault();
         if (categoryValue === category.value.toLowerCase() && searchValue === searchTerm.value.trim().toLowerCase()) {
             return;
         }
