@@ -1,15 +1,15 @@
 //@ts-check
-async function main(){
+async function main() {
     try {
-    const response = await fetch('products.json');
-    if (!response.ok) {
-        throw new Error(`HTTP error: ${response.status}`)
+        const response = await fetch('products.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error: ${response.status}`)
+        }
+        const json = await response.json();
+        initialize(json);
+    } catch (error) {
+        console.error(`Fetch problem: ${error.message}`)
     }
-    const json = await response.json();
-    initialize(json);
-} catch (error) {
-    console.error(`Fetch problem: ${error.message}`)
-}
 }
 
 main();
@@ -58,7 +58,7 @@ function initialize(products) {
         while (main.firstChild) {
             main.removeChild(main.firstChild);
         }
-        if (finalGroup.length = 0) {
+        if (finalGroup.length === 0) {
             const para = document.createElement('p');
             para.textContent = 'No result found.';
             main.appendChild(para);
