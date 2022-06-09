@@ -63,7 +63,7 @@ function initialize(products) {
             para.textContent = 'No result found.';
             main.appendChild(para);
         } else {
-            for (const product of products) {
+            for (const product of finalGroup) {
                 const sec = document.createElement('section');
                 const h2 = document.createElement('h2');
                 const para = document.createElement('p');
