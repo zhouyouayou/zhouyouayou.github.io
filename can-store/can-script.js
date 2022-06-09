@@ -50,7 +50,7 @@ function initialize(products) {
         if (searchValue === '') {
             finalGroup = filteredGroup;
         } else {
-            finalGroup = filteredGroup.filter(product => product.name.contains(searchValue));
+            finalGroup = filteredGroup.filter(product => product.name.includes(searchValue));
         }
         updateDisplay();
     }
