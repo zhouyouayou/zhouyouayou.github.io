@@ -20,8 +20,8 @@ function initialize(products) {
     const searchBtn = document.querySelector('button');
     const main = document.querySelector('main');
 
-    let categoryValue = category.value.toLowercase();
-    let searchValue = searchTerm.value.trim().toLowercase();
+    let categoryValue = category.value.toLowerCase();
+    let searchValue = searchTerm.value.trim().toLowerCase();
 
     let filteredGroup;
     let finalGroup = products;
@@ -29,11 +29,11 @@ function initialize(products) {
 
     searchBtn.addEventListener('click', selectCategory);
     function selectCategory() {
-        if (categoryValue === category.value.toLowercase() && searchValue === searchTerm.value.trim().toLowercase()) {
+        if (categoryValue === category.value.toLowerCase() && searchValue === searchTerm.value.trim().toLowerCase()) {
             return;
         }
-        categoryValue = category.value.toLowercase();
-        searchValue = searchTerm.value.trim().toLowercase();
+        categoryValue = category.value.toLowerCase();
+        searchValue = searchTerm.value.trim().toLowerCase();
 
         if (categoryValue === 'all') {
             filteredGroup = products;
@@ -71,7 +71,7 @@ function initialize(products) {
 
                 sec.setAttribute('class', product['type']);
 
-                h2.textContent = product.name.replace(product.name.charAt([0]), product.name.charAt([0]).toUppercase());
+                h2.textContent = product.name.replace(product.name.charAt([0]), product.name.charAt([0]).toUpperCase());
 
                 para.textContent = `$${product.price}`;
 
