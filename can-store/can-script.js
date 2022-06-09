@@ -75,8 +75,8 @@ function initialize(products) {
 
                 para.textContent = `$${product.price}`;
 
-                //img.src = `images/${product.image}`;
-                //img.alt = `${product.name}`;
+                img.src = `images/${product.image}`;
+                img.alt = `${product.name}`;
 
                 main.appendChild(sec);
                 sec.appendChild(h2);
