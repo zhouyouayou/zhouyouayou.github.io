@@ -1,5 +1,5 @@
 //@ts-check
-async function main() {
+async function mainFunc() {
     try {
         const response = await fetch('products.json');
         if (!response.ok) {
@@ -12,7 +12,7 @@ async function main() {
     }
 }
 
-main();
+mainFunc();
 
 function initialize(products) {
     const category = document.querySelector('#category');
